@@ -1,0 +1,33 @@
+{
+  "name": "luca-client-initializer",
+  "version": "1.2.2",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js --ignore-path .gitignore",
+    "transpile": "babel src --out-dir lib --ignore spec.js",
+    "prePublish": "npm run lint && npm run transpile"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "eslint": "^3.9.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "helmet": "^3.4.0",
+    "luca-service-registry-library": "^1.2.4"
+  }
+}
